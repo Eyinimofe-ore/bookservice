@@ -8,7 +8,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/books")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(
+    origins = {
+        "http://localhost:5173",
+        "https://book-store-v2.vercel.app"
+    }
+)
 public class BookController {
     private final BookService service;
 
